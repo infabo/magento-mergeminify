@@ -12,36 +12,36 @@ class GaugeInteractive_MergeMinify_Model_Core_Layout_Update extends Mage_Core_Mo
      */
     public function getFileLayoutUpdatesXml($area, $package, $theme, $storeId = null)
     {
-	$xml = parent::getFileLayoutUpdatesXml($area, $package, $theme, $storeId);
-	if(Mage::getDesign()->getArea() != 'adminhtml') {
-	    $shouldMergeJs = Mage::getStoreConfigFlag('dev/js/merge_files') &&
-		Mage::getStoreConfigFlag('dev/js/merge_js_by_handle');
-	    $methods = array();
-	    if($shouldMergeJs) {
-		$methods[] = 'addJs';
-		$methods[] = 'addItem';
-	    }
-	    foreach($methods as $method) {
-		foreach($xml->children() as $handle => $child){
-		    $items = $child->xpath(".//action[@method='".$method."']");
-		    foreach($items as $item) {
-			$params = $item->xpath("params");
-			if(count($params)) {
-			    foreach($params as $param){
-				if(trim($param)) {
-				    $param->{0} = (string)$param . ' title="' . $handle . '"';
-				} else {
-				    $param->{0} = 'title="' . $handle . '"';
-				}
-			    }
-			} else {
-			    $item->addChild('params', 'title="'.$handle.'"');
-			}
-		    }
-		}
-	    }
-	}
-	return $xml;
+        $xml = parent::getFileLayoutUpdatesXml($area, $package, $theme, $storeId);
+        if(Mage::getDesign()->getArea() != 'adminhtml') {
+            $shouldMergeJs = Mage::getStoreConfigFlag('dev/js/merge_files') &&
+                Mage::getStoreConfigFlag('dev/js/merge_js_by_handle');
+            $methods = array();
+            if($shouldMergeJs) {
+                $methods[] = 'addJs';
+                $methods[] = 'addItem';
+            }
+            foreach($methods as $method) {
+                foreach($xml->children() as $handle => $child){
+                    $items = $child->xpath(".//action[@method='".$method."']");
+                    foreach($items as $item) {
+                        $params = $item->xpath("params");
+                        if(count($params)) {
+                            foreach($params as $param){
+                                if(trim($param)) {
+                                    $param->{0} = (string)$param . ' title="' . $handle . '"';
+                                } else {
+                                    $param->{0} = 'title="' . $handle . '"';
+                                }
+                            }
+                        } else {
+                            $item->addChild('params', 'title="'.$handle.'"');
+                        }
+                    }
+                }
+            }
+        }
+        return $xml;
     }
 
 }
