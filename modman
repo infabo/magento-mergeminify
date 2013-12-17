@@ -1,4 +1,4 @@
 # Gauge Interactive
 code/                               app/code/local/GaugeInteractive/MergeMinify/
 lib/                                lib/Minify/
-GaugeInteractive_MergeMinify.xml	app/etc/modules/GaugeInteractive_MergeMinify.xml
+GaugeInteractive_MergeMinify.xml    app/etc/modules/GaugeInteractive_MergeMinify.xml
