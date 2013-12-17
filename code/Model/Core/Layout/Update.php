@@ -21,7 +21,11 @@ class GaugeInteractive_MergeMinify_Model_Core_Layout_Update extends Mage_Core_Mo
                 $methods[] = 'addJs';
                 $methods[] = 'addItem';
             }
-            foreach($methods as $method) {
+            /**
+             * Don't exactly know what's going on here - probably unnecessary
+             * Title parameter isn't valid for the script or link tag anyway
+             */
+            /* foreach($methods as $method) {
                 foreach($xml->children() as $handle => $child){
                     $items = $child->xpath(".//action[@method='".$method."']");
                     foreach($items as $item) {
@@ -39,7 +43,7 @@ class GaugeInteractive_MergeMinify_Model_Core_Layout_Update extends Mage_Core_Mo
                         }
                     }
                 }
-            }
+            } */
         }
         return $xml;
     }
