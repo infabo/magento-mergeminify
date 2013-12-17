@@ -13,7 +13,7 @@
  * Java environment.
  *
  * <code>
- * Minify_YUICompressor::$jarFile = '/path/to/yuicompressor-2.3.5.jar';
+ * Minify_YUICompressor::$jarFile = '/path/to/yuicompressor.jar';
  * Minify_YUICompressor::$tempDir = '/tmp';
  * $code = Minify_YUICompressor::minifyJs(
  *   $code

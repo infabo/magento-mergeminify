@@ -24,7 +24,7 @@ class GaugeInteractive_MergeMinify_Helper_Core_Data extends Mage_Core_Helper_Dat
     public function minifyJs($data,$target)
     {
 	if ($this->isYUICompressEnabled()) {
-	    Minify_YUICompressor::$jarFile = Mage::getBaseDir().DS.'lib'.DS.'Minify'.DS.'yuicompressor-2.4.7.jar';
+	    Minify_YUICompressor::$jarFile = Mage::getBaseDir().DS.'lib'.DS.'Minify'.DS.'yuicompressor.jar';
 	    Minify_YUICompressor::$tempDir = realpath(sys_get_temp_dir());
 	}
 
