@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <sections>
+        <dev>
+            <groups>
+                <js>
+                    <fields>
+                        <merge_js_by_handle translate="label">
+                            <label>Merge JavaScript by Handle</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>Groups JavaScript files by layout handle - only works if merging is enabled.</comment>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </merge_js_by_handle>
+                        <enable_compressor_js translate="label">
+                            <label>Enable JavaScript Compression</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>For more information <![CDATA[<a href="https://developers.google.com/closure/" target="_blank">Click Here</a>]]> </comment>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_compressor_js>
+                        <compressor_js_debug translate="label">
+                            <label>Debug</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>Debug compression - only works if compression is enabled.</comment>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </compressor_js_debug>
+                        <closure_compiler_level translate="label">
+                            <label>Closure Compiler Compilation Level</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>For more information <![CDATA[<a href="https://developers.google.com/closure/compiler/docs/compilation_levels" target="_blank">Click Here</a>]]> </comment>
+                            <source_model>mergeminify/levels</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </closure_compiler_level>
+                    </fields>
+                </js>
+                <css>
+                    <fields>
+                        <merge_css_by_handle translate="label">
+                            <label>Merge CSS by Handle</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>Groups CSS files by layout handle - only works if merging is enabled.</comment>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </merge_css_by_handle>
+                        <enable_compressor_css translate="label">
+                            <label>Enable CSS Compression</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>For more information <![CDATA[<a href="https://code.google.com/p/closure-stylesheets/" target="_blank">Click Here</a>]]> </comment>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable_compressor_css>
+                        <compressor_css_debug translate="label">
+                            <label>Debug</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>Debug compression - only works if compression is enabled.</comment>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </compressor_css_debug>
+                    </fields>
+                </css>
+            </groups>
+        </dev>
+    </sections>
+</config>
