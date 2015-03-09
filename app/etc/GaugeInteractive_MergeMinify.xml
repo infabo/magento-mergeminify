@@ -3,7 +3,7 @@
 	<modules>
 		<GaugeInteractive_MergeMinify>
 			<active>true</active>
-			<codePool>local</codePool>
+			<codePool>community</codePool>
 		</GaugeInteractive_MergeMinify>
     </modules>
 </config>

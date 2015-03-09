@@ -1,0 +1,4 @@
+app/code/community/GaugeInteractive/MergeMinify/	app/code/community/GaugeInteractive/MergeMinify/
+app/etc/GaugeInteractive_MergeMinify.xml			app/etc/GaugeInteractive_MergeMinify.xml
+lib/Closure/										lib/Closure/
+lib/YUICompressor/									lib/YUICompressor/
