@@ -1,5 +1,10 @@
 <?php
-
+/**
+ * MergeMinify - Mage_Core_Model_Layout_Update Rewrite
+ *
+ * @package    GaugeInteractive_MergeMinify
+ * @author     GaugeInteractive <accounts@gaugeinteractive.com>
+ */
 class GaugeInteractive_MergeMinify_Model_Core_Layout_Update extends Mage_Core_Model_Layout_Update
 {
     const HANDLE_ATTRIBUTE = 'data-handle'; //attribute used to store handle
@@ -7,7 +12,6 @@ class GaugeInteractive_MergeMinify_Model_Core_Layout_Update extends Mage_Core_Mo
     /**
      * Collect and merge layout updates from
      * file based on handle
-     *
      *
      * @param string $area
      * @param string $package
@@ -18,11 +22,9 @@ class GaugeInteractive_MergeMinify_Model_Core_Layout_Update extends Mage_Core_Mo
     public function getFileLayoutUpdatesXml($area, $package, $theme, $storeId = null)
     {
         $xml = parent::getFileLayoutUpdatesXml($area, $package, $theme, $storeId);
-        if (Mage::getDesign()->getArea() != 'adminhtml') {
-            $shouldMergeJs = Mage::getStoreConfigFlag('dev/js/merge_files') &&
-                Mage::getStoreConfigFlag('dev/js/merge_js_by_handle');
-            $shouldMergeCss = Mage::getStoreConfigFlag('dev/css/merge_css_files') &&
-                Mage::getStoreConfigFlag('dev/css/merge_css_by_handle');
+        Mage::log($xml, null, 'chris.log', true);
+        $shouldMergeJs = Mage::helper('mergeminify')->isJsMergeEnabled() && Mage::helper('mergeminify')->isJsMergeHandle();
+        $shouldMergeCss = Mage::helper('mergeminify')->isCssMergeEnabled() && Mage::helper('mergeminify')->isCssMergeHandle();
             $methods = array();
             if ($shouldMergeJs) {
                 $methods[] = 'addJs';
@@ -55,7 +57,6 @@ class GaugeInteractive_MergeMinify_Model_Core_Layout_Update extends Mage_Core_Mo
                     }
                 }
             }
-        }
-        return $xml;
+                return $xml;
     }
 }
