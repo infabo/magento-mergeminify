@@ -1,3 +1,3 @@
-app/code/community/GaugeInteractive/MergeMinify/	app/code/community/GaugeInteractive/MergeMinify/
-app/etc/GaugeInteractive_MergeMinify.xml			app/etc/GaugeInteractive_MergeMinify.xml
-lib/MergeMinify/									lib/MergeMinify/
+app/code/community/GaugeInteractive/MergeMinify/		app/code/community/GaugeInteractive/MergeMinify/
+app/etc/modules/GaugeInteractive_MergeMinify.xml		app/etc/modules/GaugeInteractive_MergeMinify.xml
+lib/MergeMinify/										lib/MergeMinify/
