@@ -22,7 +22,6 @@ class GaugeInteractive_MergeMinify_Model_Core_Layout_Update extends Mage_Core_Mo
     public function getFileLayoutUpdatesXml($area, $package, $theme, $storeId = null)
     {
         $xml = parent::getFileLayoutUpdatesXml($area, $package, $theme, $storeId);
-        Mage::log($xml, null, 'chris.log', true);
         $shouldMergeJs = Mage::helper('mergeminify')->isJsMergeEnabled() && Mage::helper('mergeminify')->isJsMergeHandle();
         $shouldMergeCss = Mage::helper('mergeminify')->isCssMergeEnabled() && Mage::helper('mergeminify')->isCssMergeHandle();
             $methods = array();

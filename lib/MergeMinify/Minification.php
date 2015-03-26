@@ -47,7 +47,6 @@ class MergeMinify_Minification
 		$output = array();
 		$status = 0;
 		$command = self::_command($type, $targetFile, $tmpTargetFile, $debug);
-		Mage::log($command, null, 'chris.log', true);
 		exec(escapeshellcmd($command)  . ' 2>&1', $output, $status);
 
 		if ($debug) {
