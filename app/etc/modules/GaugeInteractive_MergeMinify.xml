@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<GaugeInteractive_MergeMinify>
+			<active>true</active>
+			<codePool>community</codePool>
+		</GaugeInteractive_MergeMinify>
+    </modules>
+</config>
